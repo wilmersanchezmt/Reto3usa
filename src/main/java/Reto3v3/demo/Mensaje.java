@@ -23,15 +23,15 @@ public class Mensaje implements Serializable {
     private Integer idMessage;
     private String messageText;
     
+     @ManyToOne
+    @JoinColumn(name="clientId")
+    @JsonIgnoreProperties({"messages", "client", "reservations"})
+    private Cliente client;
+    
     @ManyToOne
     @JoinColumn(name="id")
     @JsonIgnoreProperties({"messages", "client", "reservations"})
     private Motorbike motorbike;
-
-    @ManyToOne
-    @JoinColumn(name="clientId")
-    @JsonIgnoreProperties({"messages", "client", "reservations"})
-    private Cliente client;
 
     public Integer getIdMessage() {
         return idMessage;
