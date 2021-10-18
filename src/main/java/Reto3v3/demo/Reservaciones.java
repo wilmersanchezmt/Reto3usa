@@ -79,7 +79,7 @@ public class Reservaciones implements Serializable  {
         return motorbike;
     }
 
-    public void setBike(Motorbike bike) {
+    public void setBike(Motorbike motorbike) {
         this.motorbike = motorbike;
     }
 
